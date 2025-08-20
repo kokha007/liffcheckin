@@ -13,7 +13,7 @@
   <body>
     <center>
     <h1>Check-In/Out Log</h1>
-<p>Click the button to check-in or check-out with your coordinates. HRA </p>
+<p>ระบบลงเวลา ปฏิบัติงาน </p>
 <div id="cin" class="invisible"><button type="button" class="btn btn-success" onclick="getLocation()">Check-In</button></div>
 <div id="cout" class="invisible"><button id="cout" type="button" class="btn btn-danger" onclick="getLocationOut()">Check-Out</button></div>
 
@@ -34,9 +34,9 @@ today.toLocaleString('th-TH', { timeZone: 'Asia/Bangkok' })
 var hh = today.getHours();
 var mm = today.getMinutes(); 
 
-        if(hh <= 12 ){
+        if(hh <= 17 ){
           document.getElementById("cin").classList.remove('invisible');
-        }else if(hh >= 13 ){
+        }else if(hh >= 20 ){
           document.getElementById("cout").classList.remove('invisible');
             }else{
 alert("ไม่สามารถเช็คอิน/เอาท์ได้ในช่วงเวลา 13.00-17.00 "+hh+":"+mm);
